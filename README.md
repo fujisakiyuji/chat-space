@@ -7,6 +7,7 @@
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 |text|text|null: false|
+|captured_image|string||
 
 ### Association
 - belongs_to :group
