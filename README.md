@@ -22,8 +22,8 @@
 
 ### Association
 - has_many :members
+- has_many :users, through: :members
 - has_many :messages
-- has_many :captured_images
 
 
 ## membersテーブル
