@@ -47,5 +47,5 @@
 
 ### Association
 - has_many :members
-- has_many :captured_images
+- has_many :groups, through: :members
 - has_many :messages
