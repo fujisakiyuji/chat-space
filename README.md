@@ -43,7 +43,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|nickname|string|null: false|
+|nickname|string|null: false, add_index :users, nickname, :unique => true|
 
 ### Association
 - has_many :members
