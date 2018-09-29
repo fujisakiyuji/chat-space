@@ -9,7 +9,7 @@ header.header {
 }
 
 .contents {
-  height: 100vh;
+  height: 84vh;
   width: 100vw;
   background-color: white;
   position: relative;
@@ -64,7 +64,7 @@ header.header {
   }
   &__board {
     width: 300px;
-    height: 100vh;
+    height: 100%;
     background-color: #2f3e51;
     color: #FFFFFF;
     float: left;
@@ -84,7 +84,7 @@ header.header {
   }
   &__table {
     width: 100vw - 300;
-    height: 100vh;
+    height: 100%;
     background-color: #AAAAAA;
     color: #434A54;
     margin-left: 300px;
