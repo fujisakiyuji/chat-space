@@ -1,0 +1,53 @@
+
+%header.header
+  %p チャットグループ
+
+.contents
+  .contents__user
+    .contents__user__name
+      %p seo
+    .contents__user__setting
+  .contents__group
+    .contents__group__title
+      %p sample
+    .contents__group__menbers
+      %p Menbers: seo neko
+    .contents__group__edit
+      %p Edit
+  .contents__board
+    .contents__board__list
+      .contents__board__list__title
+        %p sample
+      .contents__board__list__subtitle
+        %p Good bye world
+      .contents__board__list__title
+        %p sample
+      .contents__board__list__subtitle
+        %p Good bye world
+  .contents__table
+    .contents__table__free-space
+    .contents__table__article
+      .contents__table__article__name-time
+        %p.contents__table__article__name-time__name
+          seo
+        %p.contents__table__article__name-time__time
+          2016/09/21 06:16:55
+      %p.contents__table__article__sentence
+        Hello world!
+      .contents__table__article__name-time
+        %p.contents__table__article__name-time__name
+          neko
+        %p.contents__table__article__name-time__time
+          2016/09/22 06:16:55
+      %p.contents__table__article__sentence
+        Good bye world!
+    .contents__table__post
+      .contents__table__post__notes-att
+        .contents__table__post__notes-att__notes
+          %textarea{:placeholder => "type a message", :row => "1", :style => "border:none"}
+        .contents__table__post__notes-att__attachment
+          %i.far.fa-image
+        %label.image{:for => "file_photo"}
+          %input#file_photo{:style => "visibility:hidden;", :type => "file"}
+      %input.contents__table__post__button{:type => "submit", :value => "Send"}
+
