@@ -8,32 +8,10 @@
       %p seo
     .contents__user__setting
   .contents__group
-    .contents__group__title
-      %p sample
-    .contents__group__menbers
-      %p Menbers: seo neko
-    .contents__group__edit
-      %p Edit
+    = render :partial => "group"
   .contents__board
-    .contents__board__list
-      .contents__board__list__title
-        %p sample
-      .contents__board__list__subtitle
-        %p Good bye world
-      .contents__board__list__title
-        %p sample
-      .contents__board__list__subtitle
-        %p Good bye world
   .contents__table
     .contents__table__free-space
     = render :partial => "article"
-    .contents__table__post
-      .contents__table__post__notes-att
-        .contents__table__post__notes-att__notes
-          %textarea{:placeholder => "type a message", :row => "1", :style => "border:none"}
-        .contents__table__post__notes-att__attachment
-          %i.far.fa-image
-        %label.image{:for => "file_photo"}
-          %input#file_photo{:style => "visibility:hidden;", :type => "file"}
-      %input.contents__table__post__button{:type => "submit", :value => "Send"}
+    = render :partial => "post"
 
