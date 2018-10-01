@@ -1,0 +1,10 @@
+.contents__table__post
+  .contents__table__post__notes-att
+    .contents__table__post__notes-att__notes
+      %textarea{placeholder: "type a message", row: "1", style: "border:none"}
+    .contents__table__post__notes-att__attachment
+      = fa_icon("image")
+    %label.image{for: "file_photo"}
+      %input#file_photo{style: "visibility:hidden;", type: "file"}
+  %input.contents__table__post__button{type: "submit", value: "Send"}
+
