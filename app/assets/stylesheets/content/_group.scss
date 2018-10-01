@@ -1,0 +1,33 @@
+&__group {
+  width: 100vw - 300;
+  height: 100px;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-bottom-color: #eeeeee;
+  margin-left: 300px;
+  padding: 0 40px;
+  position: relative;
+  &__title {
+    position: absolute;
+    top: 35px;
+    font-size: 20px;
+    color: #333333;
+  }
+  &__menbers {
+    position: absolute;
+    top: 70px;
+    font-size: 12px;
+    color: #999999;
+    float: left;
+  }
+  &__edit {
+    position: absolute;
+    top: 28px;
+    right: 40px;
+    line-height: 40px;
+    color: $light-blue;
+    height: 40px;
+    padding: 0 20px;
+    border: 1px solid $light-blue;
+  }
+}

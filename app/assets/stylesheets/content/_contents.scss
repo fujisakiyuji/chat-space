@@ -1,0 +1,10 @@
+.contents {
+  height: 84vh;
+  width: 100vw;
+  background-color: white;
+  position: relative;
+@import "content/user";
+@import "content/group";
+@import "content/board";
+@import "content/table";
+}
