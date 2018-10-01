@@ -18,7 +18,9 @@ header.header {
     height: 100px;
     background-color: #253141;
     padding: 0 20px;
-    border-bottom-color: #eeeeee;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-bottom-color: #253141;
     float: left;
     font-size: 16px;
     &__name {
@@ -37,6 +39,8 @@ header.header {
   &__group {
     width: 100vw - 300;
     height: 100px;
+    border-style: solid;
+    border-width: 0 0 1px 0;
     border-bottom-color: #eeeeee;
     margin-left: 300px;
     padding: 0 40px;
@@ -88,7 +92,7 @@ header.header {
   &__table {
     width: 100vw - 300;
     height: 100%;
-    background-color: #AAAAAA;
+    background-color: white;
     color: #434A54;
     margin-left: 300px;
     position: relative;
@@ -123,6 +127,7 @@ header.header {
     &__post {
       height: 90px;
       width: 100%;
+      background-color: #AAAAAA;
       position: absolute;
       bottom: 0;
       &__notes-att {
