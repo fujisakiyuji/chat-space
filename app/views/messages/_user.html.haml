@@ -3,4 +3,5 @@
 .contents__user__setting
   = link_to edit_user_path(current_user) do
     = fa_icon 'cog', class: 'icon'
-  = fa_icon("clipboard")
+  = link_to new_group_path do
+    = fa_icon 'pencil-square-o', class: 'icon'
