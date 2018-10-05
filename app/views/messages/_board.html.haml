@@ -1,9 +1,7 @@
 .contents__board__list
-  .contents__board__list__title
-    %p sample
-  .contents__board__list__subtitle
-    %p Good bye world
-  .contents__board__list__title
-    %p sample
-  .contents__board__list__subtitle
-    %p Good bye world
+  - current_user.groups.each do |group|
+    = link_to group_messages_path(group) do
+      .contents__board__list__title
+        = group.name
+      .contents__board__list__subtitle
+        メッセージはまだありません。

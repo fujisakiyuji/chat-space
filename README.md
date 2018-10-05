@@ -10,7 +10,6 @@
 |captured_image|string||
 
 ### Association
-- belongs_to :group
 - belongs_to :user
 
 
@@ -21,12 +20,11 @@
 |name|string|null: false|
 
 ### Association
-- has_many :members
-- has_many :users, through: :members
-- has_many :messages
+- has_many :group_user
+- has_many :users, through: :group_user
 
 
-## membersテーブル
+## group_userテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -46,6 +44,6 @@
 |name|string|null: false, add_index :users, name, :unique => true|
 
 ### Association
-- has_many :members
-- has_many :groups, through: :members
+- has_many :group_user
+- has_many :groups, through: :group_user
 - has_many :messages
