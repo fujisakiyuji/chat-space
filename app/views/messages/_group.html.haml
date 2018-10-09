@@ -1,6 +1,7 @@
 .contents__group__title
-  %p sample
+  = @group.name
 .contents__group__menbers
-  %p Menbers: seo neko
-.contents__group__edit
-  %p Edit
+  Menber：
+  - @group.users.each do |user|
+    = user.name
+= link_to "Edit", edit_group_path(@group), class: "contents__group__edit"

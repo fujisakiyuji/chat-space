@@ -1,0 +1,10 @@
+.contents__table__article
+  .contents__table__article__name-time
+    %p.contents__table__article__name-time__name
+      = message.user.name
+    %p.contents__table__article__name-time__time
+      = message.created_at
+  %p.contents__table__article__sentence
+    - if message.text.present?
+      = message.text
+    = image_tag message.image.url if message.image.present?
