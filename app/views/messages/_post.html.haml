@@ -1,10 +1,8 @@
 .contents__table__post
-  .contents__table__post__notes-att
-    .contents__table__post__notes-att__notes
-      %textarea{placeholder: "type a message", row: "1", style: "border:none"}
-    .contents__table__post__notes-att__attachment
-      = fa_icon("image")
-    %label.image{for: "file_photo"}
-      %input#file_photo{style: "visibility:hidden;", type: "file"}
-  %input.contents__table__post__button{type: "submit", value: "Send"}
-
+  = form_for [@group, @message] do |f|
+    .contents__table__post__notes-att
+      = f.text_field :text, class: 'contents__table__post__notes-att__notes', placeholder: 'type a message'
+      = f.label :image, class: 'contents__table__post__notes-att__attachment' do
+        = fa_icon 'picture-o', class: 'icon'
+        = f.file_field :image, class: 'hidden'
+    = f.submit 'Send', class: 'contents__table__post__button'

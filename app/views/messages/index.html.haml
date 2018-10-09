@@ -1,4 +1,3 @@
-
 .contents
   .contents__user
     = render partial: "user"
@@ -8,5 +7,5 @@
     = render partial: "board"
   .contents__table
     .contents__table__free-space
-    = render partial: "article"
+    = render @messages
     = render partial: "post"
