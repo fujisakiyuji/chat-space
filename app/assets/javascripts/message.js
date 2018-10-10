@@ -46,7 +46,7 @@ else{
     .done(function(data){
       console.log("sert")
       var html = buildHTML(data);
-      $('.contents__table').append(html)
+      $('.contents__table__area').append(html)
       $('.contents__table__post__notes-att__notes').val('')
       $(".contents__table__post__button").prop('disabled', false);
       $(".contents__table__area").scrollTop($(".contents__table__area")[0].scrollHeight);
