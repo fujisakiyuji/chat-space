@@ -45,7 +45,6 @@ if (message.image.url != null ) {html += `<div><img class="contents__table__area
     })
     .fail(function(){
       alert('error');
-      $(".contents__table__post__button").prop('disabled', false);
     })
   })
 })
