@@ -15,18 +15,11 @@ $(function(){
               <p class="contents__table__area__article__message__sentence">
                 ${message.text}
               </p>
+            </div>
+          </div>
         `
 
-if (message.image.url != null ){
-  html += `<img class="contents__table__area__article__message__image" src=${message.image.url}>
-            </div>
-          </div>`
-}
-else{
-    `</div
-  </div>`
-}
-
+if (message.image.url != null ) {html += `<div><img class="contents__table__area__article__message__image" src=${message.image.url}></div>`;}
 
     return html;
   }
@@ -44,7 +37,6 @@ else{
       disabled: false,
   })
     .done(function(data){
-      console.log("sert")
       var html = buildHTML(data);
       $('.contents__table__area').append(html)
       $('.contents__table__post__notes-att__notes').val('')
