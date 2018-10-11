@@ -34,7 +34,6 @@ if (message.image.url != null ) {html += `<div><img class="contents__table__area
       dataType: 'json',
       processData: false,
       contentType: false,
-      disabled: false,
   })
     .done(function(data){
       var html = buildHTML(data);
