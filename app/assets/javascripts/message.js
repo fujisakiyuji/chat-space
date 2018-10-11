@@ -40,11 +40,13 @@ if (message.image.url != null ) {html += `<div><img class="contents__table__area
       var html = buildHTML(data);
       $('.contents__table__area').append(html)
       $('.contents__table__post__notes-att__notes').val('')
-      $(".contents__table__post__button").prop('disabled', false);
       $(".contents__table__area").scrollTop($(".contents__table__area")[0].scrollHeight);
     })
     .fail(function(){
       alert('error');
+    })
+    .always(function(){
+      $(".contents__table__post__button").prop('disabled', false);
     })
   })
 })
