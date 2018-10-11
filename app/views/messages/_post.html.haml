@@ -1,5 +1,5 @@
 .contents__table__post
-  = form_for [@group, @message] do |f|
+  = form_for [@group, @message], html: {id: "new_post"} do |f|
     .contents__table__post__notes-att
       = f.text_field :text, class: 'contents__table__post__notes-att__notes', placeholder: 'type a message'
       = f.label :image, class: 'contents__table__post__notes-att__attachment' do
