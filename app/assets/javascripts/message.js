@@ -19,7 +19,8 @@ $(function(){
           </div>
         `
 
-if (message.image.url != null ) {html += `<div><img class="contents__table__area__article__message__image" src=${message.image.url}></div>`;}
+if (message.image.url != null )
+  {html += `<div><img class="contents__table__area__article__message__image" src=${message.image.url}></div>`;}
 
     return html;
   }
