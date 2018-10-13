@@ -1,6 +1,6 @@
 $(function() {
 
-var search_list = $("#chat-group-user-22")
+var search_list = $("#user-search-result")
 function appendUser(user) {
   var html = `
     <div class="chat-group-user clearfix">
@@ -19,7 +19,7 @@ function appendNoUser(user) {
   search_list.append(html)
 }
 
-var add_menber = $("#chat-group-user-8")
+var add_menber = $("#chat-group-users")
 function addUser(user_id, user_name) {
   var html = `
     <div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
@@ -42,7 +42,7 @@ function addUser(user_id, user_name) {
     })
 
     .done(function(users) {
-      $(".chat-group-user.clearfix").empty();
+      $("#user-search-result").empty();
       if (users.length !== 0) {
         users.forEach(function(user){
           appendUser(user);
