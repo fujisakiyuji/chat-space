@@ -1,8 +1,8 @@
-$(function(){
+$(function() {
   function buildHTML(message){
 
     var html = `
-          <div class="contents__table__area__article">
+          <div class="contents__table__area__article" data-message-id="${message.id}">
             <div class="contents__table__area__article__name-time">
               <div class="contents__table__area__article__name-time__name">
                 ${message.user_name}
@@ -20,7 +20,7 @@ $(function(){
         `
 
 if (message.image.url != null )
-  {html += `<div><img class="contents__table__area__article__message__image" src=${message.image.url}></div>`;}
+  {html += `<div><img class="contents__table__area__article__message__image" src=${message.image.url}></div>`};
 
     return html;
   }
@@ -35,7 +35,7 @@ if (message.image.url != null )
       dataType: 'json',
       processData: false,
       contentType: false,
-  })
+    })
     .done(function(data){
       var html = buildHTML(data);
       $('.contents__table__area').append(html)
@@ -48,5 +48,28 @@ if (message.image.url != null )
     .always(function(){
       $(".contents__table__post__button").prop('disabled', false);
     })
-  })
-})
+  });
+
+  $(function(){
+    setInterval(update, 5000);
+  });
+  function update(){
+    $.ajax({
+      url: location.href,
+      type: "GET",
+      dataType: 'json',
+      processData: false,
+      contentType: false
+    })
+    .done(function(json){
+      var id = $('.contents__table__area__article').last().data('messageId');
+      var insertHTML = "";
+      json.messages.forEach(function(message){
+        if (message.id > id) {
+        insertHTML += buildHTML(message);
+      }
+    });
+      $(".contents__table__area").append(insertHTML);
+    })
+  };
+});
